@@ -11,7 +11,7 @@ import time
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "pkg/account"))
 from account import Account
-from account import AccountManager
+from account_manager import AccountManager
 
 
 ###############################################################################
