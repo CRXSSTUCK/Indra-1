@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as et
 import helpers
+import random
 
 class ConfigError(Exception):
     def __init__(self, message):
@@ -14,8 +15,8 @@ class AccountKey:
         return self.accountType + "_" + self.accountLogin
 
 class BingRewardsReportItem(AccountKey):
-    def __init__(self):
-        AccountKey.__init__(self)
+    def __init__(self, AccountKey):
+        AccountKey.__init__(AccountKey)
 
         self.oldPoints       = 0
         self.newPoints       = 0
@@ -35,6 +36,9 @@ class Config:
             self.betweenQueriesSalt      = 3.0    # default to this number of seconds
             self.betweenAccountsInterval = 30.0   # default to this number of seconds
             self.betweenAccountsSalt     = 35.5   # default to this number of seconds
+            
+        def getSleepBetweenAccounts(self):			
+			return self.betweenAccountsInterval + random.uniform(0, self.betweenAccountsSalt)
 
     class Proxy:
         """

@@ -31,6 +31,7 @@ def earnRewards(httpHeaders, reportItem, password, config):
 		if password is None: raise ValueError("password is None")
 		
 		print "earnRewards, begining rewards"
+		sys.exit(2)
 		bingRewards = BingRewards(httpHeaders, config)
 		print "calling bing auth ", bingRewards.opener
 		bingAuth	= BingAuth(httpHeaders, bingRewards.opener)
@@ -126,11 +127,13 @@ def __stringifyAccount(reportItem, strLen):
 # rewards, managing setup and tear down, retrys, report generation, etc.
 ##############################################################################
 def __process_account(account, cfg):
-	print "__processAccount(): "	
+	print "__processAccount(): ", account.getRef(), cfg
 	
 	# generate report item for later use
-	reportItem = BingRewardsReportItem(account)
-	
+	reportItem = BingRewardsReportItem(account.getRef())
+	reportItem.accountType = account.accountType
+	reportItem.accountLogin = account.accountLogin
+		
 	# generate headers for http requests (including spoofed agent string) 
 	httpHeaders = __generate_headers() # #$REFACTOR_HTTP$#
 	
