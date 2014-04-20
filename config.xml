@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<configuration>
+    <general
+        betweenQueriesInterval="10.0"
+        betweenQueriesSalt="5.0"
+        betweenAccountsInterval="12"
+        betweenAccountsSalt="60" />
+
+    <!--
+      - Note: login and password are optional
+      -       if not set, the proxy is considered open
+      -       only Basic HTTP Authentication is currently supported
+      -       protocol: http or https
+    <proxy protocol="http" url="113.57.252.106:80" login="John Smith" password="xxx" />
+    -->
+
+    <accounts>
+    <!-- primary email acct -->
+   <!--     <account type="Live" disabled="false">
+            <login>gernerehawal@hotmail.com</login>
+            <password>d6455q!5MMFyEy**</password>
+        </account>
+        <account type="Live" disabled="false">
+            <login>onteedotansuphel@hotmail.com</login>
+            <password>cw7Z93W83wV*uY^j</password>
+        </account>
+        <account type="Live" disabled="false">
+            <login>telachensigalven@outlook.com</login>
+            <password>9j*3DjHABxKQ*Xb$</password>
+        </account>
+        <account type="Live" disabled="false">
+            <login>ulbestescarlanui@hotmail.com</login>
+            <password>!5F489&amp;PMPfaWjVJ</password>
+        </account> -->
+        <account type="Facebook" disabled="false">
+            <login>lacksposolleteri@gmail.com</login>
+            <password>%g7&amp;*5mpxGg8QE#n</password>
+        </account>
+       <!-- <account type="Live" disabled="false">
+            <login>erstanymerneaght@outlook.com</login>
+            <password>5MnmD6Kan9b34Gc7</password>
+        </account>
+		<account type="Live" disabled="false">
+            <login>resmiscrerfaking@outlook.com</login>
+            <password>Us77aX5FNZT5Ee84</password>
+        </account>
+        <account type="Live" disabled="false">
+            <login>entialionaluntri@outlook.com</login>
+            <password>935uKeZ38x4y5WP</password>
+        </account>
+		<account type="Live" disabled="false">
+            <login>ouscoarespellmse@outlook.com</login>
+            <password>X4h6gg8D^3rpfM22</password>
+        </account>
+		<account type="Live" disabled="false">
+            <login>segibenardipmory@outlook.com</login>
+            <password>t$3Ut3Ew4542%2W^</password>
+        </account>        -->
+    </accounts>
+<!--
+    <events>
+        <onError>
+            <retry interval="15" salt="13.5" count="1" />
+            <notify cmd="/home/fresearch/projects/BingRewards/notify/onError.sh %a %p %r %P %l %i %e" />
+        </onError>
+        <onComplete>
+            <retry if="%p lt 16" interval="15" salt="13.5" count="1" />
+            <notify if="%l gt 3000"
+                    cmd='/home/fresearch/projects/BingRewards/notify/onComplete_reached.sh %a %p %r %P %l %i "reached %l Life Credits"' />
+            <notify if="%p ne 16"
+                    cmd="/home/fresearch/projects/BingRewards/notify/onComplete.sh %a %p %r %P %l %i" />
+            <notify if="%P gt 475"
+                    cmd="/home/fresearch/projects/BingRewards/notify/onComplete.sh %a %p %r %P %l %i" />
+
+            <account ref="Live_gernerehawal@hotmail.com">
+                <retry if="%p lt 16" interval="15" salt="13.5" count="3" />
+                <notify if="%l gt 750"
+                        cmd='/home/fresearch/projects/BingRewards/notify/onComplete_reached.sh %a %p %r %P %l %i "Gold with %l Life Credits"' />
+                <notify if="%p ne 16"
+                        cmd="/home/fresearch/projects/BingRewards/notify/onComplete.sh %a %p %r %P %l %i" />
+                <notify if="%P gt 475"
+                        cmd="/home/fresearch/projects/BingRewards/notify/onComplete.sh %a %p %r %P %l %i" />
+            </account>
+        </onComplete>
+        <onScriptComplete>
+            <notify cmd="/home/fresearch/projects/BingRewards/notify/onScriptComplete.sh -mail" />
+        </onScriptComplete>
+        <onScriptFailure>
+            <notify cmd="/home/fresearch/projects/BingRewards/notify/onScriptFailure.sh -mail" />
+        </onScriptFailure>
+    </events> -->
+</configuration>
