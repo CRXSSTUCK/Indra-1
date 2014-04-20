@@ -31,7 +31,6 @@ def earnRewards(httpHeaders, reportItem, password, config):
 		if password is None: raise ValueError("password is None")
 		
 		print "earnRewards, begining rewards"
-		sys.exit(2)
 		bingRewards = BingRewards(httpHeaders, config)
 		print "calling bing auth ", bingRewards.opener
 		bingAuth	= BingAuth(httpHeaders, bingRewards.opener)
