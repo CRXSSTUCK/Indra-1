@@ -228,7 +228,7 @@ if __name__ == "__main__":
 	cfg = Config()
 	
 	try:
-		cfg.from_file(cf)
+		cfg.parseFromFile(cf)
 	except IOError, e:
 		print "IOError: %s" % e
 		sys.exit(2)

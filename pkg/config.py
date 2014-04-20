@@ -1,19 +1,3 @@
-#!/usr/bin/env python
-
-#
-# developed by Sergey Markelov (2013)
-#
-
-"""
-Configuration processor
-works with files like config.xml
-
-Usage:
-    from config import Config
-    ...
-    config.parse(configFile)
-"""
-
 import xml.etree.ElementTree as et
 import helpers
 
